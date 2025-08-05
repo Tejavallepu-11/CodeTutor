@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: codetutor
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "gunicorn codetutor_project.wsgi"
+    envVars:
+      - key: DJANGO_SETTINGS_MODULE
+        value: codetutor_project.settings
+      - key: PYTHON_VERSION
+        value: 3.10
