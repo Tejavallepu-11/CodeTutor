@@ -1,0 +1,38 @@
+ {% extends 'base.html' %}
+
+{% block content %}
+<div class="text-center py-20 bg-gradient-to-br from-blue-100 via-purple-100 to-pink-100 rounded-lg shadow-md">
+  <h2 class="text-5xl font-extrabold text-blue-600 animate-fade-in">
+    Welcome to <span class="text-violet-600">CodeTutor</span>
+  </h2>
+  <p class="mt-6 text-xl text-gray-700 max-w-2xl mx-auto leading-relaxed">
+    Get <span class="text-purple-600 font-semibold">AI-powered assistance</span> to understand, debug, and elevate your code like never before.
+  </p>
+
+  <!-- Quotes Section -->
+  <div class="mt-10 space-y-4 text-gray-800 italic">
+    <p>“Programs must be written for people to read, and only incidentally for machines to execute.” – Harold Abelson</p>
+    <p>“Debugging is like being the detective in a crime movie where you are also the murderer.” – Filipe Fortes</p>
+    <p>“Code is like humor. When you have to explain it, it’s bad.” – Cory House</p>
+  </div>
+
+  <!-- CTA Button -->
+  <div class="mt-12">
+    <a href="{% url 'chat_interface' %}" class="px-6 py-3 bg-gradient-to-r from-purple-500 to-blue-500 text-white font-semibold rounded-full shadow-lg hover:scale-105 transition duration-300">
+      Try the AI Debugger
+    </a>
+  </div>
+</div>
+
+<!-- Animation Keyframes (add at the bottom of your base or in a style block) -->
+<style>
+  .animate-fade-in {
+    animation: fadeIn 2s ease-in-out;
+  }
+
+  @keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(-10px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+</style>
+{% endblock %}

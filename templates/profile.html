@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+{% block content %}
+  <div class="max-w-xl mx-auto mt-10 p-6 bg-white rounded shadow">
+    <h2 class="text-2xl font-bold text-indigo-600">👤 Profile Page</h2>
+    <p class="mt-4 text-gray-700">Welcome, {{ request.user.username }}!</p>
+  </div>
+{% endblock %}
